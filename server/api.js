@@ -112,5 +112,7 @@ app.delete('/delete-appointment/:id', (req, res)=>{
     });
 });
 
-app.listen(4040);
-console.log(`Server Started http://127.0.0.1:4040`); 
+const PORT = process.env.PORT || 4040;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
